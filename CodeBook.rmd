@@ -1,0 +1,121 @@
+Code Book for the Tidy Dataset Derived from the Human Activity Recognition Using Smartphones Dataset (Version 1.0)
+==================================================================================================================
+For a Description of the original dataset, please refer to:
+*Human Activity Recognition Using Smartphones Dataset*
+*Version 1.0*  
+==================================================================================================================  
+Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
+Smartlab - Non Linear Complex Systems Laboratory
+DITEN - Università degli Studi di Genova.
+Via Opera Pia 11A, I-16145, Genoa, Italy.
+activityrecognition@smartlab.ws
+www.smartlab.ws
+==================================================================================================================  
+
+##Description of the Tidy Dataset
+
+The original dataset contained a total of 563 variables as follows:
+
+* 561 measurement variables
+* 1 variable identifying the subject (1-30)
+* 1 variable identifying the activity (1-6)
+
+Of the above, only those pertaining to the mean and standard deviation of each of these measurables (86 variables) and the subject and activity variables (2 variables) were extracted.
+
+The mean of each of the 86 measurement variables was calculated by activity type and subject resulting in a new dataset with 88 columns (86+2) and 180 (30x6) rows.
+
+Furthermore, the activity variable has been transformed into a factor with 6 levels to represent each of the activity types.
+
+Lastly, the original measurement variable names were amended to refer to the mean of these variables and descriptive names were allocated to the subject and activity variables.
+
+Below is a complete list of the variables names in the Tidy Dataset:
+
+ [1] "Subject"                                     
+ [2] "Activity"                                    
+ [3] "Mean of tBodyAcc-mean()-X"                   
+ [4] "Mean of tBodyAcc-mean()-Y"                   
+ [5] "Mean of tBodyAcc-mean()-Z"                   
+ [6] "Mean of tBodyAcc-std()-X"                    
+ [7] "Mean of tBodyAcc-std()-Y"                    
+ [8] "Mean of tBodyAcc-std()-Z"                    
+ [9] "Mean of tGravityAcc-mean()-X"                
+[10] "Mean of tGravityAcc-mean()-Y"                
+[11] "Mean of tGravityAcc-mean()-Z"                
+[12] "Mean of tGravityAcc-std()-X"                 
+[13] "Mean of tGravityAcc-std()-Y"                 
+[14] "Mean of tGravityAcc-std()-Z"                 
+[15] "Mean of tBodyAccJerk-mean()-X"               
+[16] "Mean of tBodyAccJerk-mean()-Y"               
+[17] "Mean of tBodyAccJerk-mean()-Z"               
+[18] "Mean of tBodyAccJerk-std()-X"                
+[19] "Mean of tBodyAccJerk-std()-Y"                
+[20] "Mean of tBodyAccJerk-std()-Z"                
+[21] "Mean of tBodyGyro-mean()-X"                  
+[22] "Mean of tBodyGyro-mean()-Y"                  
+[23] "Mean of tBodyGyro-mean()-Z"                  
+[24] "Mean of tBodyGyro-std()-X"                   
+[25] "Mean of tBodyGyro-std()-Y"                   
+[26] "Mean of tBodyGyro-std()-Z"                   
+[27] "Mean of tBodyGyroJerk-mean()-X"              
+[28] "Mean of tBodyGyroJerk-mean()-Y"              
+[29] "Mean of tBodyGyroJerk-mean()-Z"              
+[30] "Mean of tBodyGyroJerk-std()-X"               
+[31] "Mean of tBodyGyroJerk-std()-Y"               
+[32] "Mean of tBodyGyroJerk-std()-Z"               
+[33] "Mean of tBodyAccMag-mean()"                  
+[34] "Mean of tBodyAccMag-std()"                   
+[35] "Mean of tGravityAccMag-mean()"               
+[36] "Mean of tGravityAccMag-std()"                
+[37] "Mean of tBodyAccJerkMag-mean()"              
+[38] "Mean of tBodyAccJerkMag-std()"               
+[39] "Mean of tBodyGyroMag-mean()"                 
+[40] "Mean of tBodyGyroMag-std()"                  
+[41] "Mean of tBodyGyroJerkMag-mean()"             
+[42] "Mean of tBodyGyroJerkMag-std()"              
+[43] "Mean of fBodyAcc-mean()-X"                   
+[44] "Mean of fBodyAcc-mean()-Y"                   
+[45] "Mean of fBodyAcc-mean()-Z"                   
+[46] "Mean of fBodyAcc-std()-X"                    
+[47] "Mean of fBodyAcc-std()-Y"                    
+[48] "Mean of fBodyAcc-std()-Z"                    
+[49] "Mean of fBodyAcc-meanFreq()-X"               
+[50] "Mean of fBodyAcc-meanFreq()-Y"               
+[51] "Mean of fBodyAcc-meanFreq()-Z"               
+[52] "Mean of fBodyAccJerk-mean()-X"               
+[53] "Mean of fBodyAccJerk-mean()-Y"               
+[54] "Mean of fBodyAccJerk-mean()-Z"               
+[55] "Mean of fBodyAccJerk-std()-X"                
+[56] "Mean of fBodyAccJerk-std()-Y"                
+[57] "Mean of fBodyAccJerk-std()-Z"                
+[58] "Mean of fBodyAccJerk-meanFreq()-X"           
+[59] "Mean of fBodyAccJerk-meanFreq()-Y"           
+[60] "Mean of fBodyAccJerk-meanFreq()-Z"           
+[61] "Mean of fBodyGyro-mean()-X"                  
+[62] "Mean of fBodyGyro-mean()-Y"                  
+[63] "Mean of fBodyGyro-mean()-Z"                  
+[64] "Mean of fBodyGyro-std()-X"                   
+[65] "Mean of fBodyGyro-std()-Y"                   
+[66] "Mean of fBodyGyro-std()-Z"                   
+[67] "Mean of fBodyGyro-meanFreq()-X"              
+[68] "Mean of fBodyGyro-meanFreq()-Y"              
+[69] "Mean of fBodyGyro-meanFreq()-Z"              
+[70] "Mean of fBodyAccMag-mean()"                  
+[71] "Mean of fBodyAccMag-std()"                   
+[72] "Mean of fBodyAccMag-meanFreq()"              
+[73] "Mean of fBodyBodyAccJerkMag-mean()"          
+[74] "Mean of fBodyBodyAccJerkMag-std()"           
+[75] "Mean of fBodyBodyAccJerkMag-meanFreq()"      
+[76] "Mean of fBodyBodyGyroMag-mean()"             
+[77] "Mean of fBodyBodyGyroMag-std()"              
+[78] "Mean of fBodyBodyGyroMag-meanFreq()"         
+[79] "Mean of fBodyBodyGyroJerkMag-mean()"         
+[80] "Mean of fBodyBodyGyroJerkMag-std()"          
+[81] "Mean of fBodyBodyGyroJerkMag-meanFreq()"     
+[82] "Mean of angle(tBodyAccMean,gravity)"         
+[83] "Mean of angle(tBodyAccJerkMean),gravityMean)"
+[84] "Mean of angle(tBodyGyroMean,gravityMean)"    
+[85] "Mean of angle(tBodyGyroJerkMean,gravityMean)"
+[86] "Mean of angle(X,gravityMean)"                
+[87] "Mean of angle(Y,gravityMean)"                
+[88] "Mean of angle(Z,gravityMean)"
+
